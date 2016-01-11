@@ -8,13 +8,15 @@ class User < ActiveRecord::Base
 	#has_many :following, through: :active_relationships, source: :followed
 	#has_many :followers, through: :passive_relationships, source: :follower
 
-	has_and_belongs_to_many :following, join_table: "relationships", class_name: "User", foreign_key: "follower_id"
+	has_many :relationships, foreign_key: 'user_id'
+    has_many :reverse_relations, class_name: 'Relationship', foreign_key: 'follower_id'
 
-	has_and_belongs_to_many :followers, join_table: "relationships", class_name: "User", foreign_key: "user_id"
+    has_many :following, :through => :relationships, source: "followee"
+    has_many :followers, :through => :reverse_relations, source: "follower"
 
 
-	# has_many :posts, dependent: :destroy
-	# has_many :texts, dependent: :destroy
-	# has_many :photos, dependent: :destroy
-	# has_many :comments, dependent: :destroy
+	has_many :posts, dependent: :destroy
+	has_many :texts, dependent: :destroy
+	has_many :photos, dependent: :destroy
+	has_many :comments, dependent: :destroy
 end
