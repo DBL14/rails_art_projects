@@ -10,3 +10,4 @@ u1 = User.create!(name: 'bob', email: 'gmail.com', password_digest: 'password')
 
 u2 = User.create!(name: 'dave', email: 'email', password_digest: 'password')
 
+p1 = Photo.create!()
