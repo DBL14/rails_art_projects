@@ -3,11 +3,11 @@
 
 <% @posts.each do |post| %>
 
-<%= post.title %>
-<br>
-<%= image_tag post.url %>
-<br>
-<%= post.body %>
+	<p><%= post.title %></p>
+	<p>By: <%= post.user.name %></p>
+	<%= image_tag post.url %>
+	
+	<p><%= post.body %></p>
 
 
 <% end %>

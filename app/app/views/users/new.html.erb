@@ -17,11 +17,6 @@
 </div>
 
 <div class= "field">
-<%= f.label :summary %>
-<%= f.text_field :summary %>
-</div>
-
-<div class= "field">
 <%= f.label :email %>
 <%= f.text_field :email %>
 </div>
@@ -40,3 +35,5 @@
 	<%= f.submit %>
 </div>
 <% end %>
+
+<%= link_to "back", new_session_path, method: :get %>
