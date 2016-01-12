@@ -1,0 +1,4 @@
+<%= form_for @user do |f| %>
+<%= hidden_field_tag :follower, :followee %>
+<%= f.submit "Follow" %>
+<% end %>

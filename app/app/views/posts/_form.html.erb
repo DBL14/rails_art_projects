@@ -8,9 +8,12 @@
 		<%= f.label :body %>
 		<%= f.text_field :body %>
 	</div>
-
+	<div>
+		<%= f.label :url %>
+		<%= f.text_field :url %>
+	</div>
 	<div class= "actions">
 	<%= f.submit %>
 	</div>
-	<%= link_to "Cancel", new_post_path, method: :get %>
+	<%= link_to "Cancel", :back, method: :get %>
 <% end %>
