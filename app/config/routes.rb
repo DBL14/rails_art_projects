@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new'
   resources :sessions, only: [:new, :create, :destroy]
 
+  resources :posts
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
