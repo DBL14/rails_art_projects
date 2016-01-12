@@ -1,0 +1,16 @@
+
+<%= form_for @post do |f| %>
+	<div>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</div>
+	<div>
+		<%= f.label :body %>
+		<%= f.text_field :body %>
+	</div>
+
+	<div class= "actions">
+	<%= f.submit %>
+	</div>
+	<%= link_to "Cancel", new_post_path, method: :get %>
+<% end %>
