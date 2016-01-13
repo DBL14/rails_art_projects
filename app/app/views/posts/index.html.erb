@@ -1,15 +1,18 @@
 <%= link_to "sign out", sessions_path, method: :delete %>
 
 
-<h1>Posts</h1>
+<h3>Posts</h3>
 
-<button><%= link_to "New Post", new_post_path %></button>
-
-<%= current_user.following.count %> <%= current_user.followers.count %>
+<%= link_to "Create a Post", new_post_path %>
+<br>
+<%= current_user.following.count %> 
+<br>
+<%= current_user.followers.count %>
 <% @posts.each do |post| %>
-
+	<div>
 	<p><%= post.title %></p>
 	<p>By: <%= post.user.name %></p>
+	</div>
 	 <%= if post.user.id != current_user.id
 
 			if following?(post.user) 
@@ -21,8 +24,10 @@
 			end 
 		end
 	%>
+	<div>
 	<%= image_tag post.url %>
 	
 	<p><%= post.body %></p>
+	</div>
 <% end %>
 

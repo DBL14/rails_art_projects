@@ -15,7 +15,24 @@
  *= require foundation_and_overrides
 
  */
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bitter:400,700);
 
 body {
  background-color: #CBF5F4;
+ text-align: center;
+font-family: 'PT Sans', sans-serif;
 }
+
+h1 {
+	font-family: 'Bitter', serif;
+	font-size: 200px;
+}
+
+div {
+	background-color: white;
+}
+
+@media
+
+
