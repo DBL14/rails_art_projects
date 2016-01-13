@@ -23,4 +23,18 @@ class User < ActiveRecord::Base
 
 	has_secure_password
 	validates :email, presence: true, uniqueness: true
+
+	# def following?(other_user)
+	# 	relationships.find_by_user_id(other_user.id)
+	# end
+
+
+	# def follow(other_user)
+	#   following.push other_user
+ #  	end
+
+ #  	def unfollow(other_user)
+ #  		following.delete other_user
+	# end 
+
 end

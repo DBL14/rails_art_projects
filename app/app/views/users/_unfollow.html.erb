@@ -1,3 +1,2 @@
-<%= form_for @user do |f| %>
-<%= f.submit "Unfollow" %>
-<% end %>
+
+<%= link_to "Unfollow", "/user/#{post.user.id}/unfollow" %>

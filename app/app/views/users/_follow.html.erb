@@ -1,4 +1,4 @@
-<%= form_for @user do |f| %>
-<%= hidden_field_tag :follower, :followee %>
-<%= f.submit "Follow" %>
+<%= form_for current_user do |f| %>
+<%= f.submit "Follow", 'user/:id/follow' %>
+
 <% end %>

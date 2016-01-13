@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   resources :users
 
+  get '/users/:id/follow', to: 'relationships#create'
+  get '/users/:id/unfollow', to: 'relationships#destroy'
+
   get 'login', to: 'sessions#new'
   resources :sessions, only: [:new, :create]
 
