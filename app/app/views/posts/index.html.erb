@@ -1,13 +1,10 @@
-<%= link_to "sign out", sessions_path, method: :delete %>
+ <h1>Gallery</h1>
 
+<div class ="sticky"><%= link_to "Sign Out", sessions_path, method: :delete %>		<%= link_to "Create a Post", new_post_path %>		<p>Artists you like:</p><%= current_user.following.count %> <p>Supporters:</p><%= current_user.followers.count %>
+</div>
 
 <h3>Posts</h3>
 
-<%= link_to "Create a Post", new_post_path %>
-<br>
-<%= current_user.following.count %> 
-<br>
-<%= current_user.followers.count %>
 <% @posts.each do |post| %>
 	<div>
 	<p><%= post.title %></p>
@@ -17,10 +14,10 @@
 
 			if following?(post.user) 
 			 	# render 'users/unfollow' 
-			 	 link_to "Unfollow", "/users/#{post.user.id}/unfollow" 
+			 	 link_to "Not quite", "/users/#{post.user.id}/unfollow" 
 		 	else 
 		 		# render 'users/follow' 
-		 		link_to "Follow", "/users/#{post.user.id}/follow" 
+		 		link_to "Artist", "/users/#{post.user.id}/follow" 
 			end 
 		end
 	%>

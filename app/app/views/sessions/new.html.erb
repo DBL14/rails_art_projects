@@ -1,4 +1,6 @@
-<h3>Login</h3>
+<h1>Gallery</h1>
+
+
 <%= form_tag sessions_path do %>
 	<div class="field">
 		<%= label_tag :email %>
@@ -8,10 +10,10 @@
 		<%= label_tag :password %>
 		<%= password_field_tag :password %>
 	</div>
-	<div class="actions"><%= submit_tag "log in" %></div>
+	<%= submit_tag "Log in" %>
 <% end %>
-
-<p id="sign up"><%= link_to "sign up", new_user_path, method: :get %></p>
+<br>
+<p><%= link_to "Sign up", new_user_path, method: :get %></p>
 
 
 
