@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 	end
 
 	def show
-		@post = Post.find(params[:id, :title, :body, :url])
+		@post = Post.find(params[:id])
 	end
 
 	def new
@@ -14,12 +14,19 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@post = Post.create(params[:id, :title, :body, :url])
+		# binding.pry
+		@post = current_user.posts.new(params.require(:post).permit(:title, :body, :url))
 		if @post.save
-			redirect_to post_path(@post),
-					notice: "You successfully created a new post"
+			redirect_to post_path(@post), notice: "You successfully created a new post"
 		else
 			render :new, alert: "Post creation failed"
 		end
-	end
+		
+  	end
+
+  	# private
+  	# 	def post_params
+  	# 		params.require(:post).permit(:title, :body, :url)
+  	# 	end
 end
+# (params[:id, :title, :body, :url])

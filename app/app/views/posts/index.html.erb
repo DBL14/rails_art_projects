@@ -1,7 +1,10 @@
+<%= link_to "sign out", sessions_path, method: :delete %>
+
 
 <h1>Posts</h1>
 
-<p><%= link_to "New Post", new_post_path %></p>
+<button><%= link_to "New Post", new_post_path %></button>
+
 <%= current_user.following.count %> <%= current_user.followers.count %>
 <% @posts.each do |post| %>
 
