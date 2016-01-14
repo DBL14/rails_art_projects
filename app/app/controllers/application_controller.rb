@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :following?
   def current_user
     if @current_user != nil 
-		  return @current_user
+		   @current_user
     end
 
     def following?(user)
