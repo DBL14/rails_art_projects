@@ -10,10 +10,10 @@
 		<%= label_tag :password %>
 		<%= password_field_tag :password %>
 	</div>
-	<%= submit_tag "Log in" %>
+	<%= submit_tag "Log in", :class => "submit" %>
 <% end %>
 <br>
-<p><%= link_to "Sign up", new_user_path, method: :get %></p>
+<p><%= link_to "Sign up", new_user_path,  method: :get %></p>
 
 
 

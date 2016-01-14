@@ -16,7 +16,7 @@
 	</div>
 	
 	<div class= "actions">
-		<%= f.submit %>
+		<%= f.submit :class => "submit" %>
 	</div>
-	<%= link_to "Cancel", :back, method: :get %>
+	<%= link_to "Cancel", posts_path, method: :get %>
 <% end %>

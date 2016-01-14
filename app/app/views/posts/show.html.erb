@@ -1,6 +1,6 @@
 <h1>Gallery</h1>
-<%= link_to "Sign Out", sessions_path, method: :delete %>
-<%= link_to "Back", :back, method: :get %>
+<%= link_to "Sign Out", sessions_path, method: :delete %>&nbsp;&nbsp;
+<%= link_to "Back", posts_path, method: :get %>
 <p><%= @post.title %></p>
 
 <%= image_tag @post.url %>

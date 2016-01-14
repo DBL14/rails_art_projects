@@ -22,6 +22,7 @@ body {
  background: linear-gradient(to right, #c9ffbf, #ffafbd);
  text-align: center;
  font-family: 'PT Sans', sans-serif;
+ font-size: 16px;
  color: #444444;
 
 }
@@ -44,7 +45,13 @@ div {
 }
 
 .actions {
-	background-color: red;
+	background: rgba(255,255,255,0.5); 
+}
+
+.submit {
+	background: rgba(255,255,255,0.5); 
+	border-width: 0;
+	border-radius: 100%;
 }
 
 

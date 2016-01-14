@@ -1,6 +1,6 @@
  <h1>Gallery</h1>
 
-<div class ="sticky"><%= link_to "Sign Out", sessions_path, method: :delete %>		<%= link_to "Create a Post", new_post_path %>		<p>Artists you like:</p><%= current_user.following.count %> <p>Supporters:</p><%= current_user.followers.count %>
+<div class ="sticky"><%= link_to "Sign Out", sessions_path, method: :delete %>  &nbsp;&nbsp; <%= link_to "Update Password", edit_user_path(current_user) %> &nbsp;&nbsp; <%= link_to "Delete account", users_path, method: :delete %> &nbsp;&nbsp;	<%= link_to "Create Post", new_post_path %>		<p>Artists you like:</p><%= current_user.following.count %> <p>Supporters:</p><%= current_user.followers.count %>
 </div>
 
 <h3>Posts</h3>
