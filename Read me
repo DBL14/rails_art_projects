@@ -1,0 +1,10 @@
+
+This app was made for artists and people who like art. A user can sign up and see the art that others post on the site. If you think a person who has posted art is an artist then you can click ‘artist’ and you will see that you like an artist and that user will have a supporter. If the same person then posts some art work which you do not like then you can click ‘not quite’ and he or she will not have your support anymore.
+
+This app is great for artists because they can access the opinions of large numbers of people who are not artists and see which ideas are potentially profitable and worth pursuing. An artist can also be better known and the users who are not artists can enjoy viewing art without having to visit a physical gallery. 
+
+My original plan was that users could follow an artist that they like. Deciding whether someone is an artist or not quite an artist follows much of the same logic of a user relating to other users.
+
+Technologies used:
+
+HTML, CSS, Ruby, Ruby on Rails and Active Record
